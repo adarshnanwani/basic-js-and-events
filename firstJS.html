@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First JS</title>
+    <script>
+      // Hello World in JavaScript:
+      console.log(`Hello World!`);
+
+      // Data types in JavaScript:
+      // There are 9 data types in JS:
+      // 1. null --
+      // 2. undefined --
+      // 3. Boolean ----
+      // 4. Number ----
+      // 5. BigInt
+      // 6. Strings ----
+      // 7. Symbols
+      // 8. Objects ----
+      // 9. Functions ----
+
+      // Variables
+      // let - value can change later
+      // const - value will not change
+
+      const PI = 3.14;
+      let day = 'Monday';
+      /* RULE => Always use const, and if your code breaks
+and you need to reassign the use let */
+
+      // Variables and Data Types
+      const age = 25; // number
+      const personName = 'Adarsh'; // string
+      const isDaytime = true; // boolean
+      // null - intentional
+      // undefined - unintentional
+      const person = {
+        // Object
+        name: 'Adarsh',
+        age: 25,
+      };
+
+      // Ways to define a function
+      function getSum(num1, num2) {
+        const sum = num1 + num2;
+        return sum;
+      }
+      const getDifference = function (num1, num2) {
+        // Function
+        const diff = num1 - num2;
+        return diff;
+      };
+      const getModulus = (num1, num2) => {
+        const mod = num1 % num2;
+        return mod;
+      };
+
+      function callAlert(functionName) {
+        // alert(`You are inside ${functionName} function.`);
+      }
+      // Anonymous function --- read about it
+
+      const getAverage = function (a, b) {
+        // Function
+        const avg = getSum(a, b) / 2;
+        callAlert('getAverage');
+        console.log('From getAverage function', avg);
+        return avg;
+      };
+      const avrg = getAverage(12, 18);
+      console.log('avrg', avrg);
+      // console.log('From outside', avg); // This is out of scope
+
+      function sayHello() {
+        alert('Hello World!');
+      }
+      for (let i = 0; i <= 10; i++) {
+        if (i == 3) {
+          continue;
+        }
+        // console.log(i);
+      }
+
+      /* Popups in JavaScript
+        1. prompt
+        2. confirm
+        3. alert
+      */
+
+      // const name = prompt('What is your name?');
+      // console.log(name);
+      if (name != null && name != '') {
+        const ans = confirm(`Hi! ${name} How are you today?`);
+        if (ans == true) {
+          alert('You clicked OK!');
+        } else {
+          alert('You clicked Cancel');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>First JS Program</p>
+    <p><button onclick="sayHello()">Click Me!</button></p>
+  </body>
+</html>

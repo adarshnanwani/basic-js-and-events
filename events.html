@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body onload="test()">
+    <h2 onclick="headingClick()">JS Events</h2>
+    <p onmouseover="setBackground()" onmouseout="removeBackground()" id="para">
+      wejkhvdjdskbhjvb dwhasczxklnjnbejwads cxz khdksajcxbzh ewfasdfaSDX
+      EWFASDASD efsdwsdvfsearwdfsvcx ewfdsa wfdasfsaedx ewfdsqwradfsb
+      fsdewqfdasvx dwfasa dsdfaasfdx qefas qwdsacvx dsafaweafsdcx
+      wejkhvdjdskbhjvb dwhasczxklnjnbejwads cxz khdksajcxbzh ewfasdfaSDX
+      EWFASDASD efsdwsdvfsearwdfsvcx ewfdsa wfdasfsaedx ewfdsqwradfsb
+      fsdewqfdasvx dwfasa dsdfaasfdx qefas qwdsacvx dsafaweafsdcx
+      wejkhvdjdskbhjvb dwhasczxklnjnbejwads cxz khdksajcxbzh ewfasdfaSDX
+      EWFASDASD efsdwsdvfsearwdfsvcx ewfdsa wfdasfsaedx ewfdsqwradfsb
+      fsdewqfdasvx dwfasa dsdfaasfdx qefas qwdsacvx dsafaweafsdcx
+    </p>
+
+    <h3 id="heading">List of items:</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <script>
+      function test() {
+        console.log('Document body has been loaded.');
+      }
+      function headingClick() {
+        console.log('You clicked a heading');
+      }
+
+      function setBackground() {
+        document.querySelector('#para').style.backgroundColor = 'orange';
+      }
+      function removeBackground() {
+        document.querySelector('#para').style.backgroundColor = 'white';
+      }
+
+      const heading = document.querySelector('#heading');
+      heading.addEventListener('mouseover', function () {
+        heading.style.backgroundColor = 'orange';
+      });
+      heading.addEventListener('mouseout', function () {
+        heading.style.backgroundColor = 'white';
+      });
+
+      const lis = document.querySelectorAll('li');
+      for (let i = 0; i < lis.length; i++) {
+        lis[i].addEventListener('mouseover', function () {
+          lis[i].style.backgroundColor = 'orange';
+        });
+        lis[i].addEventListener('mouseout', function () {
+          lis[i].style.backgroundColor = 'white';
+        });
+      }
+    </script>
+  </body>
+</html>
